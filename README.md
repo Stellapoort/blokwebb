@@ -244,19 +244,20 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
-
+  <img src="readme-images/homeaf.png" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/storeaf.png" width="375px" alt="uitomst opdracht 1">
 
   ### Dit ging goed/Heb ik geleerd: 
   Hamburger menu maken.
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  dark and light mode.
+  <img src="readme-images/hamburgermenu.png" width="375px" alt="top">
+  <img src="readme-images/darkmode.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
   Responsive maken.
-
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  Wishlist toevoegen
+  <img src="readme-images/mislukt.png" width="375px" alt="bummer">
 </details>
 
 

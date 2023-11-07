@@ -281,7 +281,9 @@ h2{
   font-weight: 2;
 }
 
-/* p */
+
+
+/* a */
 
 main.home a:nth-of-type(2), main.home a:nth-of-type(6), main.home a:nth-of-type(8){
   display: flex;
@@ -293,6 +295,7 @@ main.home a:nth-of-type(2), main.home a:nth-of-type(6), main.home a:nth-of-type(
   color: gray;
 }
 
+/* p */
 main.home > p:first-of-type {
   text-align: center;
   color: rgb(123, 123, 123);
@@ -375,7 +378,7 @@ html {
   display: flex;
   justify-content: left;
   background: none;
-  margin: 1px; /* Voegt een beetje ruimte toe boven de tekst */
+  margin: 1px;
   font-size: 2em;
   color: rgb(17, 16, 16);
   margin-left: 0.5em;
@@ -413,7 +416,7 @@ html {
   border: none;
   font-family: 'Times New Roman', Times, serif;
   font-size: 1em;
-  padding: 12px 31px;
+  padding: 15px 31px;
   position: absolute; 
   left: 46%; 
   top: 45%;
@@ -441,9 +444,9 @@ html {
 /*section*/
 
 .stores section {
-  background-color: #f2f2f2; /* Voeg hier de gewenste grijstint toe */
-  width: 100%; /* Zorg ervoor dat de sectie de volledige breedte van het scherm inneemt */
-  padding: 2em 0; /* Voeg wat ruimte toe aan de boven- en onderkant van de sectie */
+  background-color: #f2f2f2; 
+  width: 100%; 
+  padding: 2em 0; 
 }
 
 
@@ -453,7 +456,7 @@ html {
 .stores span {
   position: relative; 
   color: #000000;
-  border: 1px solid #000000; /* Toegevoegd: zwarte lijn */
+  border: 1px solid #000000; 
   font-family: 'Times New Roman', Times, serif;
   font-size: 19px;
   background: white; 
@@ -468,6 +471,12 @@ html {
   background-color: #000000;
   color: white;
 }
+
+.stores span:active {
+  background-color: #000000;
+  color: white;
+}
+
 
 
 /* De map*/
@@ -513,6 +522,10 @@ footer a {
 
 footer a:focus {
   outline: 2px solid blue; /* Blauwe rand rondom het gefocuste element */
+}
+
+footer a:hover {
+text-decoration: underline;
 }
 
 

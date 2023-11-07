@@ -22,16 +22,12 @@
   }
 }
 
-
 /* Algemene stijlregels */
 * {
-  box-sizing: border-box;
   margin:0 ;
 }
 
-a{
-  cursor: pointer;
-}
+
 
 
 /* Hamburger menu */
@@ -43,17 +39,6 @@ header ul.open {
   list-style: none; /* Verwijder de standaard lijststijl */
   box-shadow: 5em 0 5em rgba(0, 0, 0, 0.6);
   padding-top: 3em;
-}
-
-header ul li {
-  list-style-type: none; /* Verwijder standaard opsommingstekens */
-  text-decoration: none; /* Verwijder onderstreping van links */
-  background-color: white;
-  margin-bottom: 2em; /* Voeg witruimte toe tussen de links */
-  margin-top: 1em;
-  padding-left: 0.4em;
-  font-size: 1.5em;
-  border-bottom: 0.2px solid rgb(129, 124, 124);
 }
 
 header ul {
@@ -68,6 +53,17 @@ header ul {
   background-color: white;
 }
 
+header ul li {
+  list-style-type: none; 
+  text-decoration: none; 
+  background-color: white;
+  margin-bottom: 2em;
+  margin-top: 1em;
+  padding-left: 0.4em;
+  font-size: 1.5em;
+  border-bottom: 0.2px solid rgb(129, 124, 124);
+}
+
 header nav {
 	display: flex;
 	position: relative;
@@ -80,7 +76,7 @@ header ul li a {
   color: rgb(129, 124, 124);
 }
 
-header ul.focuswithin {
+header ul.focus-within {
 	transform: translateX(0);
   padding: 0;
   left: 0;
@@ -105,6 +101,7 @@ nav button:first-of-type{
 
 
 
+
 /* hartje */
 
 figure p {
@@ -115,6 +112,9 @@ figure p {
   margin-left: 1em; /* Pas hier de gewenste ruimte aan tussen de <p> elementen */
   justify-content: space-between; /* Voeg dit toe */
 }
+
+
+
 
 /* stijling menu balk bovenaan */
 
@@ -147,31 +147,18 @@ nav button:nth-last-child(4) {
   margin-left: auto; 
 }
 
-.leeg{
-margin-left: 8.45em;
-background: none;
-}
+
+
 
 /* Stijl voor h1 elementen */
 h1 {
-  font-size: 0.5em;
-  height: 3.2em;
   justify-content: center;
-}
-
-
-/* logo */
-h1 {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0; 
-  text-decoration: none;
   background:none;
   margin: 3em;
-  margin-top: 3em;
+  font-size: 0.5em;
+  height: 3.2em;
 }
-
 
 h1 img {
   max-width: 100%;
@@ -194,6 +181,8 @@ h1 img {
 }
 
 
+
+
 /* Main images */
 
 main img {
@@ -207,22 +196,28 @@ main img:focus {
 }
 
 
+
+
 /* Schuifbalk */
 
-figure {
+main ul {
+  list-style-type: none;
+  padding: 0;
   display: flex;
   overflow-x: auto;
 }
 
-figure a {
+main ul li {
   flex: 0 0 auto;
   max-width: 15em;
 }
 
-figure a img{
+main ul li img {
   height: auto;
   padding: 0.5em;
 }
+
+
 
 
 /* Button 1 */
@@ -248,12 +243,6 @@ span {
   z-index: 1; /* Zorg ervoor dat de knop bovenop de afbeelding staat */ 
 }
 
-span img {
-  max-width: 100%;
-  max-height: 50%;
-  margin: 0;
-}
-
 span:hover {
   background-color: #000000;
   color: white;
@@ -266,11 +255,14 @@ span:active {
 
 
 
+
 /* a focus */
 
 main a:focus {
   opacity: 0.5;
 }
+
+
 
 
 /* Stijl voor h2 */
@@ -281,6 +273,7 @@ h2{
   letter-spacing: 0.1em; 
   font-weight: 2;
 }
+
 
 
 
@@ -296,6 +289,9 @@ main.home a:nth-of-type(2), main.home a:nth-of-type(6), main.home a:nth-of-type(
   color: gray;
 }
 
+
+
+
 /* p */
 main.home > p:first-of-type {
   text-align: center;
@@ -306,6 +302,8 @@ main.home > p:first-of-type {
   line-height: 1.4em;
   font-size: 1.1em;
 }
+
+
 
 
 /* article */
@@ -332,16 +330,19 @@ article p {
 }
 
 
+
+
 /*button 2 */
 
-section span {
+section a {
   position: relative; 
-  color: rgb(113, 113, 113);
-  border: 1px solid rgb(115, 115, 115); /* Toegevoegd: zwarte lijn */
+  color: rgb(82, 81, 81);
+  border: 1px solid rgb(82, 81, 81); /* Toegevoegd: zwarte lijn */
   font-family: inherit;
   font-size: 19px;
   background: var(--achtergrondKleur); 
-  margin-top: 1.5em;
+  padding: 0.5em 1em;
+margin-bottom: 2em;
 }
 
 section span:focus {
@@ -357,7 +358,6 @@ section span:active {
 
 section a {
   text-decoration: none;
-  height: 0;
 }
 
 
@@ -368,7 +368,6 @@ section a {
 /**************/
 /*  pagina 2  */ 
 /**************/
-
 
 html {
   scroll-behavior: smooth;
@@ -407,6 +406,7 @@ html {
 
 
 
+
 /* button 1 */
 
 .stores a p{
@@ -424,7 +424,6 @@ html {
   z-index: 1;
 }
 
-
 .stores a p:hover {
   background-color: #000000;
   color: white;
@@ -441,6 +440,8 @@ html {
 }
 
 
+
+
 /*section*/
 
 .stores section {
@@ -451,31 +452,25 @@ html {
 
 
 
+
 /* Button 2 */
 
-.stores span {
+.stores section a {
   position: relative; 
-  color: #000000;
+  color: #282828;
   border: 1px solid #000000; 
   font-family: 'Times New Roman', Times, serif;
   font-size: 19px;
+  font-weight: 10em;
   background: white; 
-  margin-left: 0.6em;
+  margin-left: 0.7em;
 }
 
-.stores a{
-  text-decoration:none ;
-}
-
-.stores span:hover {
+.stores a:hover{
   background-color: #000000;
   color: white;
 }
 
-.stores span:active {
-  background-color: #000000;
-  color: white;
-}
 
 
 
@@ -488,6 +483,9 @@ iframe {
   margin-top: 20px; 
   margin-bottom: 2em;
 }
+
+
+
 
 /**********/
 /* footer */
@@ -503,6 +501,9 @@ footer {
   text-align: center;
 }
 
+
+
+
 /* Stijl voor de iconen */
 footer img {
   width: 3em;
@@ -510,6 +511,9 @@ footer img {
   background: none;
   margin: 1em; 
 }
+
+
+
 
 /* Stijl voor de tekst onder de iconen */
 
@@ -527,6 +531,8 @@ footer a:focus {
 footer a:hover {
 text-decoration: underline;
 }
+
+
 
 
 /*form*/ 

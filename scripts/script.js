@@ -1,5 +1,5 @@
 // JavaScript Document
-console.log("hi");
+console.log("hi")
 
 
 // hamburge menu //
@@ -24,24 +24,24 @@ else (hamburgerimg.src = "images/hamburger.png")
 
 // geluidje //
 
-var images = document.querySelectorAll('img');
+var images = document.querySelectorAll('img')
 
 images.forEach(function(image) {
   image.addEventListener('click', function() {
-    var audio = new Audio("sound/buttonklik.mp3");
-    audio.play();
-  });
-});
+    var audio = new Audio("sound/buttonklik.mp3")
+    audio.play()
+  })
+})
 
 
-var buttons = document.querySelectorAll('button');
+var buttons = document.querySelectorAll('button')
 
 buttons.forEach(function(button) {
   button.addEventListener('click', function() {
-    var audio = new Audio("sound/buttonklik.mp3");
+    var audio = new Audio("sound/buttonklik.mp3")
     audio.play();
-  });
-});
+  })
+})
 
 
 var spans = document.querySelectorAll('span');

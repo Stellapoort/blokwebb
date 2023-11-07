@@ -33,6 +33,7 @@ a{
   cursor: pointer;
 }
 
+
 /* Hamburger menu */
 
 header ul.open {
@@ -355,10 +356,9 @@ section span:active {
 }
 
 section a {
-  text-decoration: none; /* Verwijder onderlijning */
+  text-decoration: none;
   height: 0;
 }
-
 
 
 
@@ -532,28 +532,21 @@ text-decoration: underline;
 /*form*/ 
 
 form {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;  
   background: none;
   padding-top: 1em;
+}
 
-  & > input {
-    margin: .5rem;
-    border: none;
-    background: hsl(0, 0%, 100%);
-    border: 0.5px solid #000000;
-    color: #000000;
-    padding: .90rem 1rem;
-  
-    &[type="submit"] {
-      background: #212b36;
-      color: rgb(255, 255, 255);
-      border: 1.5px solid #ffffff;
-      align-self: flex-start;
-    }
-    
-    &[type="email"] {
-    }
-  }
+form input {
+  margin: .5rem;
+  border: none;
+  background: hsl(0, 0%, 100%);
+  border: 0.5px solid #000000;
+  color: #000000;
+  padding: .90rem 1rem;
+}
+
+form input[type="submit"] {
+  background: #212b36;
+  color: rgb(255, 255, 255);
+  border: 1.5px solid #ffffff;
 }

@@ -29,6 +29,10 @@
   margin:0 ;
 }
 
+a{
+  cursor: pointer;
+}
+
 /* Hamburger menu */
 
 header ul.open {
@@ -36,20 +40,19 @@ header ul.open {
   padding: 0;
   left: 0;
   list-style: none; /* Verwijder de standaard lijststijl */
-  background-color: white;
   box-shadow: 5em 0 5em rgba(0, 0, 0, 0.6);
+  padding-top: 3em;
 }
 
 header ul li {
   list-style-type: none; /* Verwijder standaard opsommingstekens */
-  background: none; /* Verwijder achtergrondkleur */
   text-decoration: none; /* Verwijder onderstreping van links */
   background-color: white;
-  margin-bottom: 3em; /* Voeg witruimte toe tussen de links */
-  margin-top: 2em;
-  padding-left: 1em;
+  margin-bottom: 2em; /* Voeg witruimte toe tussen de links */
+  margin-top: 1em;
+  padding-left: 0.4em;
   font-size: 1.5em;
-  border-bottom: 0.2px solid rgb(74, 72, 72);
+  border-bottom: 0.2px solid rgb(129, 124, 124);
 }
 
 header ul {
@@ -59,7 +62,6 @@ header ul {
   transform: translateX(-100vw);
   z-index: 2;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   transition: transform 0.6s;
   background-color: white;
@@ -68,12 +70,13 @@ header ul {
 header nav {
 	display: flex;
 	position: relative;
+  color: rgb(129, 124, 124);
 }
 
 header ul li a {
   text-decoration: none ;
-  color: #000000 ;
   background: none;
+  color: rgb(129, 124, 124);
 }
 
 header ul.focuswithin {
@@ -93,15 +96,18 @@ header{
   padding: 1px;
   background-color: #fcf9f7;
   z-index: 3;
-
 }
 
+nav button:first-of-type{
+  z-index: 100;
+}
 
 
 
 /* hartje */
 
 figure p {
+  background: none;
   position: absolute;
   top: 0.3em;
   color: #000000;
@@ -110,7 +116,6 @@ figure p {
 }
 
 /* stijling menu balk bovenaan */
-
 
 header nav:nth-of-type(1) {
   display: flex;
@@ -129,18 +134,16 @@ nav button img {
   background: none;
 }
 
-
-
 nav button img:nth-child(1) {
-  margin-right: auto; /* Verplaats de laatste drie knoppen naar de rechterkant */
+  margin-right: auto; 
 }
 
 nav button:nth-child(2) {
-  margin-left: 0.2em; /* Voeg een kleine ruimte toe tussen het eerste en tweede icoontje */
+  margin-left: 0.2em; 
 }
 
-nav button:nth-last-child(3) {
-  margin-left: auto; /* Verplaats de laatste drie knoppen naar de rechterkant */
+nav button:nth-last-child(4) {
+  margin-left: auto; 
 }
 
 .leeg{
@@ -205,24 +208,19 @@ main img:focus {
 
 /* Schuifbalk */
 
-
-
 figure {
   display: flex;
-  flex-wrap: nowrap;
   overflow-x: auto;
-  max-width: 32em;
-  position: relative;
 }
 
-figure img {
-  display: block;
-  margin-right: 15px;
-  width: 70%;
-  margin-bottom: 1em;
-  text-align: center;
-  margin-right: 15px;
-  position: relative;
+figure a {
+  flex: 0 0 auto;
+  max-width: 15em;
+}
+
+figure a img{
+  height: auto;
+  padding: 0.5em;
 }
 
 
@@ -235,7 +233,6 @@ figure img {
 span {
   display: flex;
   text-align: center;
-  position: relative; /* Voeg positionele context toe aan de link */
   color: #000000;
   background-color: #ffffff;
   border: none;
@@ -253,8 +250,12 @@ span {
 span img {
   max-width: 100%;
   max-height: 50%;
-  height: auto;
   margin: 0;
+}
+
+span:hover {
+  background-color: #000000;
+  color: white;
 }
 
 span:active {
@@ -263,31 +264,79 @@ span:active {
 }
 
 
-/*section images*/
-
-.home section img {
-padding: 1em;
-margin-bottom: -0.5em;
-}
 
 /* a focus */
 
 main a:focus {
-  opacity: 0.5; /* Verminder de opacity */
+  opacity: 0.5;
+}
+
+
+/* Stijl voor h2 */
+
+h2{
+  text-align:  center;
+  margin-top: 0.5em;
+  letter-spacing: 0.1em; 
+  font-weight: 2;
+}
+
+/* p */
+
+main.home a:nth-of-type(2), main.home a:nth-of-type(6), main.home a:nth-of-type(8){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Minion Pro Regular","New York",Iowan Old Style,Apple Garamond,Baskerville,Times New Roman,Droid Serif,Times,Source Serif Pro,serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-size: 1em;
+  margin-bottom: 1em;
+  color: gray;
+}
+
+main.home > p:first-of-type {
+  text-align: center;
+  color: rgb(123, 123, 123);
+  padding: 1.3em;
+  letter-spacing: 0.1em;
+  background: none;
+  line-height: 1.4em;
+  font-size: 1.1em;
+}
+
+
+/* article */
+
+article {
+  margin: 1em;
+}
+
+ article h2 {
+  text-align: left;
+  font-size: 1.8em;
+  font-family: "Minion Pro Regular","New York",Iowan Old Style,Apple Garamond,Baskerville,Times New Roman,Droid Serif,Times,Source Serif Pro,serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-weight: 2;
+  margin-top: 0;
+}
+
+article p {
+  color: grey; 
+  text-align: left;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  line-height: 1.7em;
+  margin-inline: 0;
 }
 
 
 /*button 2 */
 
-
 section span {
   position: relative; 
-  color: var(--tekstKleur);
-  border: 1px solid var(--tekstKleur); /* Toegevoegd: zwarte lijn */
-  font-family: 'Times New Roman', Times, serif;
+  color: rgb(113, 113, 113);
+  border: 1px solid rgb(115, 115, 115); /* Toegevoegd: zwarte lijn */
+  font-family: inherit;
   font-size: 19px;
   background: var(--achtergrondKleur); 
-  margin-left: 0.6em;
   margin-top: 1.5em;
 }
 
@@ -308,114 +357,6 @@ section a {
 }
 
 
-/* Stijl voor tekst */
-
-h2{
-  display: flex;
-  justify-content: center;
-  margin-top: 1.5em;
-  letter-spacing: 0.1em; 
-}
- h2:focus {
-  outline: 2px solid blue; /* Blauwe rand rondom het gefocuste element */
-}
-
-h3 {
-  display: flex;
-  justify-content: center;
-  margin: 1em;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 0.9em;
-  color: rgb(130, 126, 126);
-}
- h3:focus {
-  outline: 2px solid blue; /* Blauwe rand rondom het gefocuste element */
-}
-
-h4 {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2em;
-  margin-top: 2em;
-  font-size: 1em;
-  color: rgb(180, 175, 175);
-  line-height: 2em;
-  text-align: center; /* Voeg deze regel toe om de tekst in het midden uit te lijnen */
-  padding: 0 1em; /* Voeg deze regel toe voor wat ruimte van de rand af */
-}
-h4:focus {
-  outline: 2px solid blue; /* Blauwe rand rondom het gefocuste element */
-}
-
-
-h5 {
-  font-size: 2em;
-  margin-left: 0.5em;
-  margin-bottom: 1em;
-  background: none;
-}
-h5:focus {
-  outline: 2px solid blue; /* Blauwe rand rondom het gefocuste element */
-}
-
-p {
-  color: grey; 
-  background: none;
-  margin-left: 1em;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-right: 1em;
-  line-height: 1.7em;
-}
-p:focus {
-  outline: 2px solid blue; /* Blauwe rand rondom het gefocuste element */
-}
-
-h6 {
-  font-size: 2em;
-  margin-left: 0.5em;
-  margin-bottom: 1em;
-  background: none;
-  color: #000000;
-}
-h6:focus {
-  outline: 2px solid blue; /* Blauwe rand rondom het gefocuste element */
-}
-
-
-
-/* footer */
-
-
-footer {
-  background-color: #fcf9f7;
-  padding: 2em;
-  text-align: center;
-}
-
-footer h6:nth-of-type(4){
-  background-color: #fcf9f7;
-  text-align: center;
-  padding-bottom: 1em;
-}
-
-/* Stijl voor de iconen */
-footer img {
-  width: 3em;
-  height: 3em;
-  background: none;
-  margin: 1em; 
-}
-
-/* Stijl voor de tekst onder de iconen */
-
-h6{
-  background: none;
-  margin: 1px; /* Voegt een beetje ruimte toe boven de tekst */
-  font-size: 1.2em;
-  color: rgb(76, 73, 73);
-  line-height: 1.7em;
-}
 
 
 
@@ -430,9 +371,9 @@ html {
   scroll-behavior: smooth;
 }
  
-
-
-.stores h6{
+.stores h2{
+  display: flex;
+  justify-content: left;
   background: none;
   margin: 1px; /* Voegt een beetje ruimte toe boven de tekst */
   font-size: 2em;
@@ -440,43 +381,61 @@ html {
   margin-left: 0.5em;
 }
 
+.stores p{
+  color: grey; 
+  background: none;
+  margin-left: 1em;
+  line-height: 0.7em;
+}
+
+.stores p:nth-of-type(1), .stores p:nth-of-type(2) {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.stores p:nth-of-type(3){
+  margin-top: 2em;
+}
+
+.stores p:nth-of-type(4) {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+
 
 /* button 1 */
 
-.stores button {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.stores a p{
   text-align: center;
-  position: relative; /* Voeg positionele context toe aan de link */
-}
-
-.stores button {
   background-color: #212b36;
   color: #ffffff;
   border: none;
   font-family: 'Times New Roman', Times, serif;
   font-size: 1em;
   padding: 12px 31px;
-  margin-bottom: 10px;
   position: absolute; 
-  top: 50%; 
-  left: 50%; 
+  left: 46%; 
+  top: 45%;
   transform: translate(-50%, -50%); /* Center de knop */
-  z-index: 1; /* Zorg ervoor dat de knop bovenop de afbeelding staat */
+  z-index: 1;
 }
 
-.stores button:focus {
+
+.stores a p:hover {
+  background-color: #000000;
+  color: white;
+}
+
+.stores a p:focus {
   background:white;
   color: black;
 }
 
-.stores button:active {
+.stores a p:active {
   background-color:black;
   color: white;
 }
-
-/* images */
 
 
 /*section*/
@@ -505,6 +464,12 @@ html {
   text-decoration:none ;
 }
 
+.stores span:hover {
+  background-color: #000000;
+  color: white;
+}
+
+
 /* De map*/
 
 iframe {
@@ -512,7 +477,42 @@ iframe {
   height: 450px; 
   border: none; 
   margin-top: 20px; 
-  margin-bottom: 2.5em;
+  margin-bottom: 2em;
+}
+
+/**********/
+/* footer */
+/**********/
+
+footer {
+  display: flex;
+  flex-direction: column; /* Zet de items onder elkaar */
+  justify-content: center; /* Verticaal centreren */
+  align-items: center; /* Horizontaal centreren */
+  background-color: #fcf9f7;
+  padding: 2em;
+  text-align: center;
+}
+
+/* Stijl voor de iconen */
+footer img {
+  width: 3em;
+  height: 3em;
+  background: none;
+  margin: 1em; 
+}
+
+/* Stijl voor de tekst onder de iconen */
+
+footer a {
+  font-size: 1em;
+  background: none;
+  color: #000000;
+  text-decoration: none;
+}
+
+footer a:focus {
+  outline: 2px solid blue; /* Blauwe rand rondom het gefocuste element */
 }
 
 
@@ -521,26 +521,26 @@ iframe {
 form {
   display: flex;
   flex-wrap: wrap;
-  
+  flex-direction: column;  
+  background: none;
+  padding-top: 1em;
+
   & > input {
-    flex: 1 1 10ch;
     margin: .5rem;
+    border: none;
+    background: hsl(0, 0%, 100%);
+    border: 0.5px solid #000000;
+    color: #000000;
+    padding: .90rem 1rem;
+  
+    &[type="submit"] {
+      background: #212b36;
+      color: rgb(255, 255, 255);
+      border: 1.5px solid #ffffff;
+      align-self: flex-start;
+    }
     
     &[type="email"] {
-      flex: 3 1 30ch;
     }
-  }
-}
-
-input {
-  border: none;
-  background: hsl(0 0% 93%);
-  color: #000000;
-  padding: .75rem 1rem;
-  
-  &[type="submit"] {
-    background: #212b36;
-    color: rgb(255, 255, 255);
-    border: 1.5px solid #ffffff;
   }
 }

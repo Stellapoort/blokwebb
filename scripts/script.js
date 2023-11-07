@@ -6,11 +6,20 @@ console.log("hi");
 
 var HamburgerButton = document.querySelector("button")
 var Hamburgerul = document.querySelector("ul")
+var hamburgerimg = document.querySelector("nav button img")
+
 
 HamburgerButton.onclick = function () {
     Hamburgerul.classList.toggle ("open")
 
+
+if( Hamburgerul.classList.contains("open")){
+  hamburgerimg.src = "images/kruis.png" 
+} 
+else (hamburgerimg.src = "images/hamburger.png")
 }
+
+
 
 
 // geluidje //
@@ -44,6 +53,8 @@ spans.forEach(function(span) {
   });
 });
 
+
+// kruisje //
 
 
 
